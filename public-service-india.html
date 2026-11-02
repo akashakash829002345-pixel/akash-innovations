@@ -79,6 +79,11 @@
   <div style="float:right">
     <button onclick="setLanguage('en')">English</button>
     <button onclick="setLanguage('te')">తెలుగు</button>
+    
+<button id="languageToggle" onclick="toggleLanguage()">
+  తెలుగు
+</button>
+
   </div>
 </header>
 
@@ -236,6 +241,22 @@
   });
 </script>
 
+
+<script>
+let currentLanguage = "en";
+
+function toggleLanguage() {
+  currentLanguage = currentLanguage === "en" ? "te" : "en";
+
+  document.querySelectorAll("[data-en][data-te]").forEach(element => {
+    element.textContent =
+      element.getAttribute("data-" + currentLanguage);
+  });
+
+  document.getElementById("languageToggle").textContent =
+    currentLanguage === "en" ? "తెలుగు" : "English";
+}
+</script>
 
 </body>
 </html>
