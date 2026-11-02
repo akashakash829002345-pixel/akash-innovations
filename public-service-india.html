@@ -1,1 +1,169 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Public Service India - Find public schemes, scholarships and official service information in Telugu and English.">
+  <title>Public Service India | AKASH INNOVATIONS</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #17243a;
+      line-height: 1.6;
+    }
+    header {
+      background: #0b1d35;
+      color: white;
+      padding: 20px 7%;
+    }
+    header a {
+      color: #42d9d0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: linear-gradient(120deg, #0c3155, #087e83);
+      color: white;
+      padding: 65px 20px;
+      text-align: center;
+    }
+    .hero h1 { font-size: 38px; margin-bottom: 10px; }
+    .hero p { font-size: 17px; }
+    .container { max-width: 1050px; margin: auto; padding: 35px 20px; }
+    .search {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #ccd5e0;
+      border-radius: 8px;
+      font-size: 16px;
+      margin: 20px 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: white;
+      padding: 23px;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px #10243d12;
+    }
+    .card h3 { color: #087e83; }
+    .card a { color: #075caa; font-weight: bold; }
+    .notice {
+      background: #fff5d8;
+      border-left: 5px solid #e6a800;
+      padding: 18px;
+      margin-top: 30px;
+    }
+    .telugu { color: #47566b; }
+    footer {
+      background: #0b1d35;
+      color: white;
+      text-align: center;
+      padding: 22px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html">AKASH INNOVATIONS</a>
+  <span style="float:right">Public Service India</span>
+</header>
+
+<section class="hero">
+  <h1>Public Service India 🇮🇳</h1>
+  <p>Simple information. Better opportunities. A stronger India.</p>
+  <p class="telugu" style="color:white">
+    ప్రభుత్వ సేవలు, పథకాలు మరియు స్కాలర్‌షిప్ సమాచారం
+  </p>
+</section>
+
+<main class="container">
+  <h2>Explore Public Services</h2>
+  <p>Find useful information and official government resources.</p>
+
+  <input
+    class="search"
+    id="search"
+    type="search"
+    placeholder="Search schemes, scholarships, documents..."
+    aria-label="Search services"
+  >
+
+  <div class="grid" id="services">
+    <article class="card">
+      <h3>🏛️ Government Schemes</h3>
+      <p>Explore government welfare schemes and check their eligibility requirements.</p>
+      <a href="https://www.myscheme.gov.in/" target="_blank" rel="noopener">
+        Visit MyScheme →
+      </a>
+    </article>
+
+    <article class="card">
+      <h3>🎓 Scholarships</h3>
+      <p>Find scholarship information and official application resources.</p>
+      <a href="https://scholarships.gov.in/" target="_blank" rel="noopener">
+        National Scholarship Portal →
+      </a>
+    </article>
+
+    <article class="card">
+      <h3>📄 Documents</h3>
+      <p>Learn about commonly required documents for public services.</p>
+      <a href="https://india.gov.in/" target="_blank" rel="noopener">
+        National Portal of India →
+      </a>
+    </article>
+
+    <article class="card">
+      <h3>📍 Andhra Pradesh</h3>
+      <p>Find official Andhra Pradesh government information and resources.</p>
+      <a href="https://www.ap.gov.in/" target="_blank" rel="noopener">
+        AP Government Website →
+      </a>
+    </article>
+  </div>
+
+  <div class="notice">
+    <strong>Important information:</strong>
+    Public Service India is an independent information initiative
+    by AKASH INNOVATIONS. It is not a government website and is
+    not affiliated with any government department.
+    Always verify eligibility, deadlines and application instructions
+    on the official government website.
+    Never share your OTP, password or sensitive personal documents
+    with unofficial websites.
+  </div>
+</main>
+
+<footer>
+  <p>Public Service India | An initiative of AKASH INNOVATIONS</p>
+  <p>Technology for Everyone.</p>
+  <p><a href="index.html" style="color:#42d9d0">Back to AKASH INNOVATIONS</a></p>
+</footer>
+
+<script>
+  const search = document.getElementById("search");
+  const cards = document.querySelectorAll(".card");
+
+  search.addEventListener("input", function () {
+    const term = this.value.toLowerCase();
+    cards.forEach(card => {
+      card.style.display = card.innerText.toLowerCase().includes(term)
+        ? "block" : "none";
+    });
+  });
+</script>
+
+</body>
+</html>
+
