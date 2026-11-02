@@ -1,1 +1,101 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Government Services Finder | AKASH INNOVATIONS</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f3f6fb;color:#172033}
+header{background:#102b50;color:white;text-align:center;padding:30px 15px}
+main{max-width:850px;margin:25px auto;padding:15px}
+select{width:100%;padding:14px;border:1px solid #bbb;border-radius:8px;font-size:16px}
+.card{background:white;padding:20px;margin-top:18px;border-radius:12px;box-shadow:0 2px 10px #0001}
+a{color:#0759a5;font-weight:bold;text-decoration:none}
+.note{background:#fff4d6;padding:14px;border-radius:8px;margin-top:20px}
+</style>
+</head>
+<body>
+<header>
+<h1>Government Services Finder</h1>
+<p>ప్రభుత్వ సేవలను సులభంగా కనుగొనండి</p>
+<p>Choose a service category to find official websites.</p>
+</header>
+
+<main>
+<h2>What service are you looking for?</h2>
+<select id="category" onchange="showService()">
+<option value="">-- Select a category --</option>
+<option value="education">Education & Scholarships</option>
+<option value="documents">Certificates & Documents</option>
+<option value="citizen">Citizen Services</option>
+<option value="agriculture">Agriculture</option>
+<option value="schemes">Government Schemes</option>
+</select>
+
+<div id="result"></div>
+
+<div class="note">
+<strong>Safety notice:</strong> AKASH INNOVATIONS is an independent information platform, not a government website. Always verify eligibility, fees and application dates on official government portals. Never share your OTP, password or Aadhaar details with this website.
+</div>
+
+<p><a href="public-service-india.html">← Back to Public Service India</a></p>
+</main>
+
+<script>
+const services = {
+education: {
+title:"Education & Scholarships",
+description:"Find scholarship information and student services.",
+links:[
+["AP Post-Matric Scholarship Guide","ap-post-matric-scholarship.html"],
+["National Scholarship Portal","https://scholarships.gov.in/"]
+]
+},
+documents: {
+title:"Certificates & Documents",
+description:"Find official citizen-service and certificate portals.",
+links:[
+["AP MeeSeva","https://ap.meeseva.gov.in/"],
+["AP Seva Portal","https://vswsonline.ap.gov.in/"]
+]
+},
+citizen: {
+title:"Citizen Services",
+description:"Explore online government services and applications.",
+links:[
+["AP Seva Portal","https://vswsonline.ap.gov.in/"],
+["National Government Services Portal","https://services.india.gov.in/"]
+]
+},
+agriculture: {
+title:"Agriculture",
+description:"Find official agricultural services and information.",
+links:[
+["AP Government Official Portal","https://www.ap.gov.in/"],
+["MyScheme Government Portal","https://www.myscheme.gov.in/"]
+]
+},
+schemes: {
+title:"Government Schemes",
+description:"Explore government schemes and check official eligibility information.",
+links:[
+["MyScheme","https://www.myscheme.gov.in/"],
+["AP Government Schemes Directory","ap-schemes.html"]
+]
+}
+};
+
+function showService(){
+ const key=document.getElementById("category").value;
+ const result=document.getElementById("result");
+ if(!key){result.innerHTML="";return;}
+ const item=services[key];
+ result.innerHTML="<div class='card'><h2>"+item.title+"</h2><p>"+item.description+"</p>"+
+ item.links.map(link=>"<p><a href='"+link[1]+"' target='_blank' rel='noopener'>"+link[0]+" →</a></p>").join("")+
+ "</div>";
+}
+</script>
+</body>
+</html>
+
