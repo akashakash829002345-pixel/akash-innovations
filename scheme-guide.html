@@ -1,1 +1,120 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scheme Guide | Public Service India</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f3f6fb;color:#172033}
+header{background:#102b50;color:white;text-align:center;padding:30px 15px}
+main{max-width:800px;margin:25px auto;padding:15px}
+.card{background:white;padding:20px;border-radius:12px;margin:15px 0;box-shadow:0 2px 10px #0001}
+select,button{width:100%;padding:13px;margin-top:10px;border-radius:8px;font-size:16px}
+select{border:1px solid #bbb}
+button{background:#0759a5;color:white;border:0;cursor:pointer}
+a{color:#0759a5;font-weight:bold;text-decoration:none}
+.notice{background:#fff1d1;padding:15px;border-radius:8px}
+</style>
+</head>
+<body>
+<header>
+<h1>Government Scheme Guide</h1>
+<p>ప్రభుత్వ పథకాల సమాచారం</p>
+<p>Find official information about schemes that may interest you.</p>
+</header>
+
+<main>
+<div class="card">
+<h2>Explore schemes by category</h2>
+<p>Select a category to find official information and application portals.</p>
+
+<label for="category">Choose a category:</label>
+<select id="category">
+<option value="">-- Select category --</option>
+<option value="student">Students & Education</option>
+<option value="farmer">Farmers & Agriculture</option>
+<option value="women">Women & Child Welfare</option>
+<option value="health">Health & Family Welfare</option>
+<option value="general">General Public Welfare</option>
+</select>
+
+<button onclick="findSchemes()">Find Information</button>
+</div>
+
+<div id="results" aria-live="polite"></div>
+
+<div class="card notice">
+<strong>Important:</strong>
+This guide provides general information only. It does not determine whether you qualify for a scheme or guarantee benefits. Eligibility, documents, deadlines and application procedures must be checked with the relevant official department.
+</div>
+
+<p><a href="public-service-india.html">← Back to Public Service India</a></p>
+</main>
+
+<script>
+const categories = {
+student: {
+title:"Students & Education",
+description:"Explore scholarships and education support.",
+links:[
+["National Scholarship Portal","https://scholarships.gov.in/"],
+["AP Scholarship Guide","ap-post-matric-scholarship.html"],
+["MyScheme","https://www.myscheme.gov.in/"]
+]
+},
+farmer: {
+title:"Farmers & Agriculture",
+description:"Explore agricultural schemes and farmer support.",
+links:[
+["PM-KISAN","https://pmkisan.gov.in/"],
+["MyScheme","https://www.myscheme.gov.in/"],
+["AP Government Portal","https://www.ap.gov.in/"]
+]
+},
+women: {
+title:"Women & Child Welfare",
+description:"Find official information about women and child welfare programmes.",
+links:[
+["MyScheme","https://www.myscheme.gov.in/"],
+["Ministry of Women and Child Development","https://wcd.gov.in/"]
+]
+},
+health: {
+title:"Health & Family Welfare",
+description:"Explore public health programmes and official information.",
+links:[
+["Ayushman Bharat PM-JAY","https://pmjay.gov.in/"],
+["National Health Mission","https://nhm.gov.in/"]
+]
+},
+general: {
+title:"General Public Welfare",
+description:"Explore government schemes across different departments.",
+links:[
+["MyScheme","https://www.myscheme.gov.in/"],
+["National Government Services Portal","https://services.india.gov.in/"],
+["AP Government Portal","https://www.ap.gov.in/"]
+]
+}
+};
+
+function findSchemes(){
+ const category=document.getElementById("category").value;
+ const results=document.getElementById("results");
+
+ if(!category){
+  results.innerHTML="<div class='card'>Please select a category first.</div>";
+  return;
+ }
+
+ const item=categories[category];
+ results.innerHTML="<div class='card'><h2>"+item.title+"</h2><p>"+item.description+"</p>"+
+ item.links.map(link=>"<p><a href='"+link[1]+"' target='_blank' rel='noopener noreferrer'>"+link[0]+" →</a></p>").join("")+
+ "</div>";
+}
+</script>
+</body>
+</html>
+
