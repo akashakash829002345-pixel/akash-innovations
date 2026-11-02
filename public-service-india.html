@@ -73,15 +73,20 @@
 </head>
 <body>
 
+
 <header>
   <a href="index.html">AKASH INNOVATIONS</a>
-  <span style="float:right">Public Service India</span>
+  <div style="float:right">
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="setLanguage('te')">తెలుగు</button>
+  </div>
 </header>
 
+
 <section class="hero">
-  <h1>Public Service India 🇮🇳</h1>
-  <p>Simple information. Better opportunities. A stronger India.</p>
-  <p class="telugu" style="color:white">
+  <h1 id="heroTitle">Public Service India 🇮🇳</h1>
+  <p id="heroSubtitle">Simple information. Better opportunities. A stronger India.</p>
+  <p id="heroTelugu" style="color:white">
     ప్రభుత్వ సేవలు, పథకాలు మరియు స్కాలర్‌షిప్ సమాచారం
   </p>
 </section>
@@ -166,18 +171,46 @@
   <p><a href="index.html" style="color:#42d9d0">Back to AKASH INNOVATIONS</a></p>
 </footer>
 
+
 <script>
+  const translations = {
+    en: {
+      title: "Public Service India 🇮🇳",
+      subtitle: "Simple information. Better opportunities. A stronger India.",
+      telugu: "Government services, schemes and scholarship information"
+    },
+    te: {
+      title: "పబ్లిక్ సర్వీస్ ఇండియా 🇮🇳",
+      subtitle: "సులభమైన సమాచారం. మెరుగైన అవకాశాలు. బలమైన భారతదేశం.",
+      telugu: "ప్రభుత్వ సేవలు, పథకాలు మరియు స్కాలర్‌షిప్ సమాచారం"
+    }
+  };
+
+  function setLanguage(language) {
+    document.getElementById("heroTitle").textContent =
+      translations[language].title;
+
+    document.getElementById("heroSubtitle").textContent =
+      translations[language].subtitle;
+
+    document.getElementById("heroTelugu").textContent =
+      translations[language].telugu;
+
+    document.documentElement.lang = language;
+  }
+
   const search = document.getElementById("search");
   const cards = document.querySelectorAll(".card");
 
   search.addEventListener("input", function () {
     const term = this.value.toLowerCase();
     cards.forEach(card => {
-      card.style.display = card.innerText.toLowerCase().includes(term)
-        ? "block" : "none";
+      card.style.display =
+        card.innerText.toLowerCase().includes(term) ? "block" : "none";
     });
   });
 </script>
+
 
 </body>
 </html>
