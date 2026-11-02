@@ -54,6 +54,10 @@ footer a{color:white}
 
 <header>
 
+<button id="languageButton" onclick="toggleLanguage()">
+  తెలుగు
+</button>
+
 <nav class="main-nav">
   <strong>🇮🇳 PUBLIC SERVICE INDIA</strong>
 
@@ -68,9 +72,17 @@ footer a{color:white}
 </nav>
 
 <div class="hero">
-<h1>Government Information, Made Simple.</h1>
-<p>ప్రభుత్వ సేవలు మరియు పథకాల సమాచారం ఒకే చోట.</p>
-<p>Find public-service information, scholarships and official government portals.</p>
+
+<h1 data-en="Government Information, Made Simple."
+    data-te="ప్రభుత్వ సమాచారం ఇప్పుడు సులభం">
+  Government Information, Made Simple.
+</h1>
+
+<p data-en="Find public-service information, scholarships and official government portals."
+   data-te="ప్రభుత్వ సేవలు, స్కాలర్‌షిప్‌లు మరియు అధికారిక ప్రభుత్వ వెబ్‌సైట్‌ల సమాచారాన్ని పొందండి.">
+  Find public-service information, scholarships and official government portals.
+</p>
+
 </div>
 </header>
 
@@ -161,6 +173,21 @@ function filterCards(){
  document.querySelectorAll("#serviceGrid .card").forEach(card=>{
   card.style.display=card.innerText.toLowerCase().includes(query)?"block":"none";
  });
+}
+</script>
+
+<script>
+let selectedLanguage = "en";
+
+function toggleLanguage() {
+  selectedLanguage = selectedLanguage === "en" ? "te" : "en";
+
+  document.querySelectorAll("[data-en][data-te]").forEach(element => {
+    element.textContent = element.getAttribute("data-" + selectedLanguage);
+  });
+
+  document.getElementById("languageButton").textContent =
+    selectedLanguage === "en" ? "తెలుగు" : "English";
 }
 </script>
 
