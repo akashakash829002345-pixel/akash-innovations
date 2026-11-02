@@ -1,1 +1,151 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AKASH INNOVATIONS - Technology for Everyone. Building digital solutions for India.">
+  <title>AKASH INNOVATIONS | Technology for Everyone</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #071426;
+      color: #f5f8ff;
+      line-height: 1.6;
+    }
+    header {
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      background: #0c1d33;
+    }
+    .logo { color: #42d9d0; font-size: 21px; font-weight: bold; }
+    nav a {
+      color: white; text-decoration: none;
+      margin-left: 18px; font-size: 14px;
+    }
+    nav a:hover { color: #42d9d0; }
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg, #102e50, #071426);
+    }
+    .hero h1 { font-size: clamp(34px, 7vw, 58px); margin-bottom: 15px; }
+    .hero h1 span { color: #42d9d0; }
+    .hero p { color: #c4d3e5; font-size: 18px; }
+    .tagline { margin: 15px 0 28px; color: #42d9d0 !important; }
+    .btn {
+      display: inline-block; background: #42d9d0;
+      color: #071426; padding: 12px 24px;
+      border-radius: 7px; text-decoration: none;
+      font-weight: bold; margin: 8px;
+    }
+    section { padding: 65px 8%; }
+    section h2 { text-align: center; font-size: 30px; margin-bottom: 25px; }
+    .intro { max-width: 850px; margin: auto; text-align: center; color: #c4d3e5; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px; margin-top: 30px;
+    }
+    .card {
+      background: #10243d; padding: 25px;
+      border: 1px solid #24415e; border-radius: 12px;
+    }
+    .card h3 { color: #42d9d0; margin-bottom: 12px; }
+    .card p { color: #c4d3e5; }
+    .highlight { background: #0c1d33; }
+    .contact { text-align: center; }
+    footer {
+      background: #0c1d33; text-align: center;
+      padding: 25px 15px; color: #b6c5d8; font-size: 14px;
+    }
+    @media(max-width:600px) {
+      header { justify-content: center; }
+      nav { text-align: center; }
+      nav a { margin: 0 7px; }
+      .hero { padding: 75px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">AKASH INNOVATIONS</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#mission">Mission</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>AKASH <span>INNOVATIONS</span></h1>
+      <p class="tagline">Technology for Everyone.</p>
+      <p>Building useful digital solutions for a smarter India.</p>
+      <a class="btn" href="#projects">Explore Our Work</a>
+    </div>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p class="intro">
+        AKASH INNOVATIONS is an independent technology initiative
+        founded by Akash Kummari in Andhra Pradesh, India.
+        We aim to make technology easier to understand and useful
+        for everyone through practical digital solutions.
+      </p>
+    </section>
+
+    <section id="mission" class="highlight">
+      <h2>Our Mission</h2>
+      <p class="intro">
+        Our mission is to use technology to simplify everyday
+        challenges, improve access to public-service information
+        and create meaningful impact in communities across India.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Our Projects</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Public Service India</h3>
+          <p>A bilingual information initiative to help people
+          discover government schemes, scholarships, documents
+          and official application resources.</p>
+        </div>
+        <div class="card">
+          <h3>Digital Innovation</h3>
+          <p>Exploring useful websites, applications and digital
+          tools that solve real-world problems.</p>
+        </div>
+        <div class="card">
+          <h3>AI & Technology</h3>
+          <p>Learning and building with artificial intelligence,
+          web development and emerging technologies.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="highlight contact">
+      <h2>Connect With Us</h2>
+      <p>Have an idea or want to collaborate?</p>
+      <p>Let's build something useful for India.</p>
+      <a class="btn" href="https://www.instagram.com/akash_innovations_14/" target="_blank" rel="noopener">Instagram</a>
+      <p style="margin-top:15px;">Founder: Akash Kummari</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 AKASH INNOVATIONS. All rights reserved.</p>
+    <p>Independent technology initiative. Not affiliated with any government department.</p>
+  </footer>
+</body>
+</html>
+
