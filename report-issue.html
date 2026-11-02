@@ -1,1 +1,117 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report an Issue | Public Service India</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f6fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+    header {
+      background: #10264a;
+      color: white;
+      text-align: center;
+      padding: 35px 18px;
+    }
+    main {
+      max-width: 650px;
+      margin: 25px auto;
+      padding: 0 16px;
+    }
+    section {
+      background: white;
+      padding: 22px;
+      border-radius: 12px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #cbd3df;
+      border-radius: 7px;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 18px;
+      padding: 12px 20px;
+      background: #10264a;
+      color: white;
+      border: 0;
+      border-radius: 7px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .warning {
+      background: #fff4dd;
+      padding: 12px;
+      border-radius: 8px;
+    }
+    a { color: #0757b5; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Report an Issue</h1>
+  <p>Help us improve Public Service India</p>
+</header>
+
+<main>
+  <section>
+    <h2>Tell us what needs correction</h2>
+    <p class="warning">
+      Do not enter Aadhaar numbers, OTPs, passwords, bank details or
+      upload personal documents.
+    </p>
+
+    <form action="https://formsubmit.co/akashakash829002345@gmail.com"
+          method="POST">
+      <input type="hidden" name="_subject"
+             value="Public Service India - Issue Report">
+      <input type="hidden" name="_captcha" value="true">
+
+      <label for="type">Issue type</label>
+      <select id="type" name="Issue type" required>
+        <option value="">Select an issue</option>
+        <option>Broken link</option>
+        <option>Incorrect information</option>
+        <option>Outdated information</option>
+        <option>Website problem</option>
+        <option>Other</option>
+      </select>
+
+      <label for="page">Page or link where you found the issue</label>
+      <input id="page" name="Page or link"
+             type="url" placeholder="https://..." required>
+
+      <label for="details">Describe the issue</label>
+      <textarea id="details" name="Issue details" rows="5"
+                placeholder="Explain what needs correction..." required></textarea>
+
+      <label for="email">Your email (optional)</label>
+      <input id="email" name="Visitor email" type="email"
+             placeholder="you@example.com">
+
+      <button type="submit">Submit Issue Report</button>
+    </form>
+
+    <p><a href="faq.html">Read our FAQ</a></p>
+    <p><a href="public-service-india.html">← Back to Public Service India</a></p>
+  </section>
+</main>
+
+</body>
+</html>
+
