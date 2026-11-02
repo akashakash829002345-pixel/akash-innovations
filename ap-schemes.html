@@ -1,1 +1,120 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AP Government Schemes Directory | Public Service India</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#17243a;line-height:1.6}
+header,footer{background:#0b1d35;color:white;padding:20px 7%}
+header a,footer a{color:#42d9d0;text-decoration:none}
+.hero{background:linear-gradient(120deg,#10345a,#087e83);color:white;text-align:center;padding:50px 20px}
+main{max-width:1050px;margin:auto;padding:25px 20px}
+.search{width:100%;padding:14px;border:1px solid #ccd5e0;border-radius:8px;font-size:16px;margin:15px 0 25px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:white;padding:22px;border-radius:10px;box-shadow:0 2px 12px #0001}
+.card h2{font-size:20px;color:#087e83}
+.card a{color:#075caa;font-weight:bold}
+.notice{background:#fff3cd;border-left:4px solid #e5a000;padding:16px;margin:25px 0}
+.small{color:#65748a;font-size:13px}
+</style>
+</head>
+<body>
+
+<header>
+<a href="index.html"><strong>AKASH INNOVATIONS</strong></a>
+</header>
+
+<section class="hero">
+<h1>Andhra Pradesh Schemes 🇮🇳</h1>
+<p>Find official government information and public services.</p>
+<p>ఆంధ్రప్రదేశ్ ప్రభుత్వ పథకాలు మరియు సేవల సమాచారం</p>
+</section>
+
+<main>
+<h2>Explore Government Resources</h2>
+<p>Search by category to find official information.</p>
+
+<input class="search" id="search" type="search"
+placeholder="Search education, welfare, agriculture, services..."
+aria-label="Search government resources">
+
+<div class="grid" id="directory">
+
+<article class="card">
+<h2>🎓 Education & Scholarships</h2>
+<p>Scholarship information, student support and education resources.</p>
+<a href="ap-post-matric-scholarship.html">Read AP Scholarship Guide →</a>
+<p><a href="https://jnanabhumi.ap.gov.in/" target="_blank" rel="noopener">Jnanabhumi Portal →</a></p>
+<p><a href="https://scholarships.gov.in/" target="_blank" rel="noopener">National Scholarship Portal →</a></p>
+</article>
+
+<article class="card">
+<h2>🏛️ Government Services</h2>
+<p>Explore citizen services, applications, certificates and department resources.</p>
+<a href="https://services.india.gov.in/service/detail/services-portal-of-andhra-pradesh-government" target="_blank" rel="noopener">AP Government Services →</a>
+</article>
+
+<article class="card">
+<h2>🌾 Agriculture</h2>
+<p>Find agricultural services and official farmer-related resources.</p>
+<a href="https://igod.gov.in/sg/AP/SPMA/organizations" target="_blank" rel="noopener">AP Government Schemes Directory →</a>
+</article>
+
+<article class="card">
+<h2>👨‍👩‍👧 Social Welfare</h2>
+<p>Explore welfare department information and student support resources.</p>
+<a href="https://socialwelfare.apcfss.in/" target="_blank" rel="noopener">AP Social Welfare Portal →</a>
+</article>
+
+<article class="card">
+<h2>🍚 Food & Ration Services</h2>
+<p>Find ration card, public distribution and food security information.</p>
+<a href="https://www.nfsa.gov.in/State/AP" target="_blank" rel="noopener">AP NFSA Information →</a>
+</article>
+
+<article class="card">
+<h2>🔎 Find More Schemes</h2>
+<p>Search government schemes by category and eligibility information.</p>
+<a href="https://www.myscheme.gov.in/" target="_blank" rel="noopener">Explore MyScheme →</a>
+</article>
+
+</div>
+
+<div class="notice">
+<strong>Important:</strong>
+This is an independent information directory by AKASH INNOVATIONS.
+It is not affiliated with the Government of Andhra Pradesh or
+the Government of India. Scheme availability, eligibility,
+benefits and deadlines may change. Verify all details with the
+official department before applying. Never share OTPs or passwords.
+</div>
+
+<p class="small">Directory prepared: 2 November 2026. Please check each linked department for its latest information.</p>
+
+<a href="public-service-india.html">← Back to Public Service India</a>
+</main>
+
+<footer>
+<p>AKASH INNOVATIONS | Technology for Everyone.</p>
+<a href="contact.html">Contact Us</a>
+</footer>
+
+<script>
+const search = document.getElementById("search");
+const cards = document.querySelectorAll(".card");
+
+search.addEventListener("input", function(){
+  const term = this.value.toLowerCase();
+  cards.forEach(card => {
+    card.style.display =
+      card.innerText.toLowerCase().includes(term) ? "block" : "none";
+  });
+});
+</script>
+
+</body>
+</html>
+
