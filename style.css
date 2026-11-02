@@ -238,3 +238,38 @@ img {
   }
 }
 
+/* Content visibility correction for all pages */
+
+body {
+  background: #050b18 !important;
+  color: #f8fafc !important;
+}
+
+h1, h2, h3, h4 {
+  color: #f8fafc !important;
+}
+
+p, li, label {
+  color: #b6c5d8 !important;
+}
+
+.card,
+.box,
+.content-box,
+.section-card,
+.info-card {
+  background: #10233b !important;
+  color: #f8fafc !important;
+  border: 1px solid #243b59 !important;
+  border-radius: 16px !important;
+  padding: 25px;
+}
+
+a {
+  color: #38bdf8;
+}
+
+a:hover {
+  color: #2dd4bf;
+}
+
