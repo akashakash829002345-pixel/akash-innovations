@@ -389,3 +389,25 @@ a:hover {
   }
 }
 
+#backToTop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00d4ff, #087cf5);
+  color: #06111f;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  z-index: 9999;
+  box-shadow: 0 5px 20px rgba(0, 212, 255, 0.3);
+}
+
+#backToTop:hover {
+  transform: translateY(-4px);
+}
+
