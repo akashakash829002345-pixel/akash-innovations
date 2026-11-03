@@ -1,1 +1,146 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AKASH AI Assistant | AKASH INNOVATIONS</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #07111f;
+      color: white;
+    }
+    header {
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #1d344c;
+    }
+    header h1 { color: #22d3ee; margin: 0; }
+    header p { color: #a8bacb; }
+    .container {
+      max-width: 760px;
+      margin: 35px auto;
+      padding: 20px;
+    }
+    .chat {
+      background: #102238;
+      border: 1px solid #24435d;
+      border-radius: 16px;
+      padding: 22px;
+      min-height: 350px;
+    }
+    .welcome {
+      text-align: center;
+      padding: 45px 10px;
+    }
+    .welcome h2 { color: #22d3ee; }
+    .welcome p { color: #c0cfdd; }
+    .input-area {
+      display: flex;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    input {
+      flex: 1;
+      min-width: 0;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #34516b;
+      background: #071827;
+      color: white;
+      font-size: 16px;
+    }
+    button {
+      padding: 14px 20px;
+      background: #06b6d4;
+      border: 0;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .note {
+      text-align: center;
+      color: #8da5bb;
+      font-size: 13px;
+      margin-top: 20px;
+    }
+    .message {
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      background: #19334d;
+      overflow-wrap: anywhere;
+    }
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #8da5bb;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AKASH AI</h1>
+    <p>Technology for Everyone</p>
+  </header>
+
+  <main class="container">
+    <section class="chat">
+      <div class="welcome" id="welcome">
+        <h2>Welcome to AKASH AI</h2>
+        <p>Your intelligent digital assistant.</p>
+        <p>Ask questions. Explore technology. Learn something new.</p>
+      </div>
+      <div id="messages" aria-live="polite"></div>
+      <div class="input-area">
+        <input id="question" type="text"
+          placeholder="Ask something..."
+          aria-label="Your question">
+        <button id="send">Send</button>
+      </div>
+    </section>
+    <p class="note">
+      AI connection is being configured. Please check back soon.
+    </p>
+  </main>
+
+  <footer>
+    © 2026 AKASH INNOVATIONS | Technology for Everyone
+  </footer>
+
+  <script>
+    const input = document.getElementById("question");
+    const messages = document.getElementById("messages");
+
+    document.getElementById("send").addEventListener("click", () => {
+      const question = input.value.trim();
+      if (!question) return;
+
+      document.getElementById("welcome").style.display = "none";
+
+      const message = document.createElement("div");
+      message.className = "message";
+      message.textContent = "You: " + question;
+      messages.appendChild(message);
+
+      const reply = document.createElement("div");
+      reply.className = "message";
+      reply.textContent =
+        "AKASH AI: The AI service is not connected yet. It will be available after backend setup.";
+      messages.appendChild(reply);
+
+      input.value = "";
+    });
+
+    input.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        document.getElementById("send").click();
+      }
+    });
+  </script>
+</body>
+</html>
+
