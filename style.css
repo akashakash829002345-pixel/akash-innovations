@@ -336,3 +336,56 @@ a:hover {
   }
 }
 
+/* Vision and feature cards */
+
+.stats-section {
+  text-align: center;
+  background:
+    radial-gradient(circle at top, #102c4a, transparent 65%),
+    #050b18;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 45px auto 0;
+}
+
+.stat-card {
+  background: linear-gradient(145deg, #112742, #0b1729);
+  border: 1px solid #243b59;
+  border-radius: 18px;
+  padding: 32px 22px;
+  transition: .3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-9px);
+  border-color: #38bdf8;
+  box-shadow: 0 15px 35px rgba(56,189,248,.13);
+}
+
+.stat-icon {
+  display: block;
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.stat-card h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  color: #b6c5d8;
+  font-size: 14px;
+}
+
+@media(max-width: 650px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
