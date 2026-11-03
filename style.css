@@ -492,3 +492,53 @@ a:hover {
   background: rgba(0, 212, 255, 0.06);
 }
 
+.newsletter-section {
+  text-align: center;
+  padding: 55px 20px;
+  background: rgba(0, 212, 255, 0.06);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 18px;
+  margin: 35px 0;
+}
+
+.newsletter-section h2 {
+  color: #00d4ff;
+}
+
+.newsletter-section p {
+  max-width: 550px;
+  margin: 12px auto 22px;
+}
+
+.newsletter-section form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.newsletter-section input {
+  padding: 13px;
+  width: min(100%, 320px);
+  border: 1px solid #00d4ff;
+  border-radius: 8px;
+  background: #0b1b30;
+  color: white;
+}
+
+.newsletter-section button {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #00d4ff;
+  color: #06111f;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.newsletter-section small {
+  display: block;
+  margin-top: 15px;
+  opacity: 0.7;
+}
+
