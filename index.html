@@ -721,5 +721,26 @@ navLinks.querySelectorAll("a").forEach(function(link) {
 </body>
 </html>
 
+<script>
+  function updateClock() {
+    const now = new Date();
+
+    document.getElementById("currentDateTime").textContent =
+      now.toLocaleString("en-IN", {
+        weekday: "long",
+        day: "2-digit",
+        month: "long",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        timeZone: "Asia/Kolkata"
+      });
+  }
+
+  updateClock();
+  setInterval(updateClock, 1000);
+</script>
+
 </body>
 </html>
