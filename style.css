@@ -484,3 +484,11 @@ a:hover {
   }
 }
 
+.live-clock {
+  text-align: center;
+  padding: 12px;
+  color: #00d4ff;
+  font-size: 14px;
+  background: rgba(0, 212, 255, 0.06);
+}
+
