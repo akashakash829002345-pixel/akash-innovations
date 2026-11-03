@@ -1,1 +1,47 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Status | AKASH INNOVATIONS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Website Health Check</h1>
+    <p>AKASH INNOVATIONS — Technology for Everyone</p>
+
+    <div class="service-card">
+      <h2>Website pages</h2>
+      <p id="pageStatus">Checking...</p>
+    </div>
+
+    <div class="service-card">
+      <h2>Website security</h2>
+      <p id="securityStatus">Checking...</p>
+    </div>
+
+    <div class="service-card">
+      <h2>Website connection</h2>
+      <p id="connectionStatus">Checking...</p>
+    </div>
+
+    <a href="index.html">← Back to Home</a>
+  </main>
+
+  <script>
+    document.getElementById("pageStatus").textContent =
+      "Homepage and this status page are available.";
+
+    document.getElementById("securityStatus").textContent =
+      location.protocol === "https:"
+        ? "HTTPS connection detected."
+        : "HTTPS is not detected.";
+
+    document.getElementById("connectionStatus").textContent =
+      navigator.onLine ? "Browser reports online." : "Browser reports offline.";
+  </script>
+</body>
+</html>
+
