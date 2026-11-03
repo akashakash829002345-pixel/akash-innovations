@@ -695,5 +695,20 @@ navLinks.querySelectorAll("a").forEach(function(link) {
 });
 </script>
 
+  <!-- Your existing website content -->
+
+  <script>
+    window.addEventListener("load", function () {
+      const loader = document.getElementById("siteLoader");
+
+      if (loader) {
+        loader.style.opacity = "0";
+        setTimeout(() => loader.remove(), 500);
+      }
+    });
+  </script>
+</body>
+</html>
+
 </body>
 </html>
